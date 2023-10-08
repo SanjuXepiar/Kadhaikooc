@@ -1,0 +1,77 @@
+@import url("https://uidesign-lib.netlify.app/main.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --vid-primary: rgb(76, 76, 228);
+  --vid-primary-op1: rgba(76, 76, 228, 0.1);
+  --vid-textColor: rgba(0, 0, 0, 0.9);
+  --vid-opacity: rgba(76, 76, 228, 0.2);
+  --vid-opacity5: rgba(76, 76, 228, 0.4);
+  --vid-border5: 1px solid var(--vid-opacity5);
+  /* //z-Index */
+  --z-index-one: 1;
+  --z-index-two: 2;
+  --z-index-three: 3;
+  --z-index-four: 4;
+  --z-index-five: 5;
+  --z-index-six: 6;
+  --gray-hover: rgba(128, 128, 128, 0.234);
+}
+body::-webkit-scrollbar {
+  width: 0.9rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--vid-primary);
+  border-radius: 1.25rem;
+  border: 3px solid whitesmoke;
+}
+
+.section-heading {
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+.section-padding {
+  padding: 2.5vw 1.25vw;
+  padding-bottom: 0;
+}
+body {
+  background: var(--vid-primary-op1);
+  font-family: "Roboto", sans-serif;
+}
+.main-content {
+  margin: 0 0 0 20%;
+  transition: all 0.3s linear;
+}
+.main-content-slide-off {
+  margin: 0;
+  transition: all 0.1s linear;
+}
+.pointer-cursor {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 780px) {
+  .section-padding {
+    padding: 2.5vw 0;
+  }
+  .main-content {
+    margin: 0;
+  }
+  .section-heading {
+    margin-left: 0.5rem;
+  }
+}

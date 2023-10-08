@@ -1,0 +1,118 @@
+.playlist-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+/* OPEN/CLOSE MODAL */
+.show-modal {
+  display: block;
+  z-index: var(--z-index-six);
+}
+.playlist-modal .playlist-modal__body {
+  background: transparent;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.playlist-modal .playlist-modal__content {
+  height: fit-content;
+  border-radius: 0.25rem;
+  background: white;
+  border: 1px solid white;
+  width: 23rem;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.05);
+}
+
+.playlist-modal .add-to-playlist,
+.playlist-modal .playlist-modal__input {
+  display: flex;
+  height: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 0.5rem;
+}
+.playlist-modal .add-to-playlist-icon {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding: 0.1rem;
+  color: var(--vid-primary);
+}
+.playlist-modal .add-to-playlist-icon span {
+  font-size: 0.9rem;
+}
+/* ------INPUT BOX------- */
+.playlist-modal .playlist-modal__input {
+  justify-content: flex-start;
+}
+.playlist-modal .playlist-modal__input input,
+.playlist-modal .playlist-modal__input button {
+  height: 2rem;
+  font-family: inherit;
+  font-size: 1rem;
+}
+.playlist-modal .playlist-modal__input input {
+  width: 90%;
+  border: 1px solid transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.644);
+}
+.playlist-modal .playlist-modal__input button {
+  border-color: var(--vid-primary);
+  background: var(--vid-primary);
+  color: white;
+  cursor: pointer;
+  width: 4rem;
+  border-radius: 0.25rem;
+  margin-left: 0.15rem;
+}
+.playlist-modal .playlist-modal__input button:active {
+  color: white;
+  background: var(--vid-primary);
+}
+/* --------LIST OF PLAYLIST--------- */
+.playlist-modal .playlist-modal__content .list {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid gray;
+  border-left: 0;
+  border-right: 0;
+}
+.playlist-modal .playlist-modal__content .list div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.25rem 0;
+  margin: 0.25rem 0;
+}
+
+.playlist-modal .playlist-modal__content .list div label {
+  margin-left: 0.75rem;
+}
+/* ----- DONE BUTTON------- */
+.playlist-modal .playlist-modal__content .done-btn {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+.playlist-modal .playlist-modal__content .done-btn:hover {
+  background: var(--vid-primary);
+  color: white;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+.playlist-modal .playlist-modal__content .done-btn:active {
+  color: black;
+}
+.playlist-modal .playlist-modal__content .done-btn span {
+  margin-left: 0.25rem;
+}
+@media screen and (max-width: 450px) {
+  .playlist-modal .playlist-modal__content {
+    width: 90%;
+  }
+}

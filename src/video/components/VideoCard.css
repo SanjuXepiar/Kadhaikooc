@@ -1,0 +1,131 @@
+.video-card {
+  margin-bottom: 2.5rem;
+  max-width: 16rem;
+  margin-right: 0.25rem;
+  flex: 1 1 0;
+  position: relative;
+}
+
+.video-card a {
+  text-decoration: none;
+}
+.video-card__thumbnail {
+  height: 9rem;
+  width: 15.5rem;
+}
+.video-card .static {
+  position: absolute;
+  background: var(--third);
+}
+.video-card .static:hover {
+  opacity: 0;
+}
+.video-card__info {
+  display: flex;
+  margin-top: 0.625rem;
+  padding-right: 1.25rem;
+  position: relative;
+}
+.video-card__info .avatar {
+  width: 2rem;
+  height: 2rem;
+}
+.video-card__text {
+  margin-left: 0.5rem;
+}
+.video-card .video-card__option {
+  position: absolute;
+  right: 0;
+  top: -0.25rem;
+  color: gray;
+  padding: 0.25rem 0.675rem;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+.video-card .video-card__option:hover {
+  background: var(--gray-hover);
+  border: 1px solid gray;
+}
+.video-card__text > h4 {
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.video-card__text > p {
+  font-size: 0.875rem;
+  color: gray;
+}
+/* Skeleton
+ */
+ .video-card__skeleton {
+  background-color: white;
+  /* max-width: 19rem; */
+  padding: 0.5rem;
+}
+.video-card__skeleton .video-card__text{
+width: 100%;
+}
+.video-card__skeleton .video-card__text > p:last-child {
+  display: flex;
+  justify-content: space-between;
+}
+/* --------DROPDOWNLIST--------- */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: var(--z-index-one);
+  left: -9.5rem;
+}
+
+.dropdown-content p {
+  color: black;
+  padding: 0.75rem 1rem;
+  width: 11rem;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content p:hover {
+  background-color: var(--vid-opacity);
+}
+.dropdown-content p:active {
+  background-color: var(--vid-primary);
+  color: white;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+/* ---------SMALL SCREEN---------- */
+
+@media screen and (max-width: 490px) {
+  .video-card {
+    min-width: 100%;
+    margin-right: 0;
+    flex: none;
+  }
+  .video-card__info {
+    padding-left: 1rem;
+  }
+
+  .video-card__thumbnail {
+    height: 12rem;
+    width: 100%;
+  }
+
+  .video-card__text > h4 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+}

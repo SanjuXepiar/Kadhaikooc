@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500&display=swap");
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 0.75rem;
+  color: var(--vid-primary);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-index-five);
+}
+.header .menu-icon {
+  color: black;
+  margin: 0 0.5rem;
+  display: flex;
+  cursor: pointer;
+  padding: 0.2rem 0.2rem;
+  transition: 0.3s;
+  border: 1px solid transparent;
+  align-items: center;
+  border-radius: 50%;
+}
+.header .rotate-clock {
+  transform: rotate(90deg);
+  transition: all 0.3s linear;
+}
+.header .rotate-anitclock {
+  transform: rotate(-90deg);
+  transition: all 0.3s linear;
+}
+.header .menu-icon:hover {
+  background: var(--gray-hover);
+}
+.header .menu-icon:active {
+  border-color: rgba(0, 0, 0, 0.3);
+  transition: 0.1s;
+}
+.header a {
+  text-decoration: none;
+  color: var(--vid-primary);
+  cursor: pointer;
+}
+.header .header__logo {
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  color: var(--vid-primary);
+  font-size: 1.5rem;
+}
+.search-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.search-section input {
+  width: 50%;
+  font-family: inherit;
+  border: 1px solid var(--vid-opacity5);
+  height: 2rem;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+  font-weight: 400;
+  border-radius: 0.25rem;
+  outline-color: var(--vid-opacity5);
+}
+
+.header .login {
+  font-size: 1.25rem;
+}
+
+.header .header__logo .logoText,
+.search-section input,
+.header .login {
+  font-family: "Montserrat", sans-serif;
+}
+/* -------------------small screen-------------------- */
+@media screen and (max-width: 780px) {
+  .header {
+    padding: 0.25rem;
+    height: 3.5rem;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+  .header .header__logo span .ooking {
+    display: none;
+    transition: 1s;
+  }
+  .header .header__logo {
+    padding: 0;
+  }
+  .search-section input {
+    width: 70%;
+  }
+  .search-section button {
+    padding: 0;
+    font-size: 0.5rem;
+    width: 3rem;
+  }
+  .header .login {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .search-section input {
+    width: 80%;
+  }
+}

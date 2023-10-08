@@ -1,0 +1,54 @@
+/* -------PLAYLIST-CARD---------- */
+.playlist-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  margin: 0.75rem;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+}
+.playlist-card img {
+  height: 8rem;
+}
+.playlist-card a {
+  text-decoration: none;
+  height: 8rem;
+}
+.playlist-card article {
+  padding: 0 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.playlist-card article .playlist-card__heading {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  width: 30%;
+}
+/* -----small-screen------- */
+@media screen and (max-width: 650px) {
+  .playlist-card {
+    margin: 0.5rem 0.25rem;
+  }
+
+  .playlist-card article {
+    padding: 0 0.75rem;
+    position: relative;
+    height: 7rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .playlist-card article .playlist-card__heading {
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+  .playlist-card article .delete-icon {
+    position: absolute;
+    bottom: 0.35rem;
+    right: 0.5rem;
+  }
+}

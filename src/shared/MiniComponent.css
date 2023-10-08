@@ -1,0 +1,86 @@
+/* ------when no. of item is zero------- */
+.no-item {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.no-item p {
+  font-size: 1.4rem;
+  margin: 0.5rem;
+}
+.no-item button {
+  padding: 0.2rem 0.8rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  background: var(--vid-primary);
+  border-color: var(--vid-primary);
+  color: white;
+  height: 2rem;
+  border-radius: 0.25rem;
+}
+.no-item button:hover {
+  filter: brightness(120%);
+}
+
+/* ----------playlist-videocard-------------- */
+.playlist-video-card {
+  display: flex;
+  padding: 0.75rem;
+  border-bottom: 1px solid gray;
+}
+.playlist-video-card img {
+  height: 6rem;
+}
+.playlist-video-card .details {
+  width: 100%;
+  position: relative;
+  padding-left: 0.75vw;
+}
+.playlist-video-card .details h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.playlist-video-card .details p {
+  color: gray;
+  font-size: 0.95rem;
+  margin-bottom: 0.1rem;
+}
+.playlist-video-card .details span {
+  position: absolute;
+  right: 1rem;
+  bottom: 0;
+  color: var(--vid-primary);
+  text-decoration: none;
+  padding: 0.15rem 0.25rem;
+}
+.playlist-video-card .details span:active {
+  background: var(--vid-primary);
+  color: white;
+  border-radius: 0.25rem;
+}
+/* -------small screen--------- */
+@media screen and (max-width: 780px) {
+  .playlist-video-card .details h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.1rem;
+  }
+  .playlist-video-card .details p {
+    font-size: 0.85rem;
+    margin-bottom: 0.05rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .playlist-video-card {
+    padding: 0.5rem;
+    flex-direction: column;
+  }
+  .playlist-video-card img {
+    height: 100%;
+  }
+  .playlist-video-card .details {
+    padding: 0.25rem;
+  }
+}

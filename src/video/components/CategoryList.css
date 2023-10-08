@@ -1,0 +1,34 @@
+.category-list {
+  min-height: 4rem;
+  background: white;
+  border-top: 1px solid var(--vid-primary-op1);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.category-list .category {
+  padding: 0 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-transform: capitalize;
+}
+.category-list .category input {
+  margin-right: 0.5rem;
+}
+@media screen and (max-width: 780px) {
+  .category-list {
+    overflow-x: scroll;
+  }
+  .category-list::-webkit-scrollbar {
+    height: 0.1rem;
+  }
+
+  .category-list::-webkit-scrollbar-track {
+    background: white;
+  }
+
+  .category-list::-webkit-scrollbar-thumb {
+    background: white;
+  }
+}

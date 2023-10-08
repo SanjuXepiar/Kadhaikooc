@@ -1,0 +1,64 @@
+.video-page {
+  min-height: 110vh;
+}
+.video-page .video-details h2 {
+  font-weight: 500;
+  margin: 0.5rem;
+}
+.video-page .video-details div {
+  margin: 0 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  color: gray;
+}
+.video-page .video-details div p {
+  margin-right: 0.25rem;
+}
+.video-page .video-channel-and-control {
+  margin: 1rem 0.5rem;
+  border: 1px solid gray;
+  padding: 0.25rem 0;
+  border-left: 0;
+  border-right: 0;
+}
+.video-page .video-channel-and-control,
+.video-page .video-channel-and-control .channel,
+.video-page .video-channel-and-control .control,
+.video-page .video-channel-and-control .control div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.video-page .video-channel-and-control .channel p {
+  margin-left: 0.5rem;
+}
+.video-page .video-channel-and-control .control div {
+  flex-direction: column;
+  width: 4rem;
+}
+
+.video-page .video-channel-and-control .control div span {
+  font-size: 0.9rem;
+}
+.video-page .video-channel-and-control .control .icon {
+  font-size: 2rem;
+}
+.video-page .video-channel-and-control .control .icon:active {
+  font-size: 1.75rem;
+  color: var(--vid-primary);
+}
+.video-page .video-channel-and-control .control .liked {
+  color: var(--vid-primary);
+}
+
+@media screen and (max-width: 680px) {
+  .video-page .video-channel-and-control .control div {
+    width: 3rem;
+  }
+  .video-page .video-channel-and-control .control .icon {
+    font-size: 1.75rem;
+  }
+  .video-page .video-channel-and-control .control .icon:active {
+    font-size: 1.5rem;
+  }
+}
